@@ -1,0 +1,23 @@
+###语法结构 1.层级结构   2.注意缩进  3.KEY-vale 之间注意空格
+
+
+
+
+spring:
+  profiles:
+    active: test
+---    #环境分隔
+spring:
+  profiles: dev
+server:
+  port: 8080     #开发环境为8080   测试环境为8090  生产环境8092
+  servlet:
+    context-path: /
+---  
+spring:
+  profiles: test
+server:
+  port: 8090     #开发环境为8080   测试环境为8090  生产环境8092
+  servlet:
+    context-path: /
+    
